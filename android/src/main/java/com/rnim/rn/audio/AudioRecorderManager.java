@@ -48,7 +48,7 @@ class AudioRecorderManager extends ReactContextBaseJavaModule {
     this.audioPlayerManager = new AudioPlayerManager(reactContext);
   }
 
-  @Override
+  //@Override
   public Map<String, Object> getConstants() {
     Map<String, Object> constants = new HashMap<>();
     constants.put(DocumentDirectoryPath, this.getReactApplicationContext().getFilesDir().getAbsolutePath());
@@ -61,7 +61,7 @@ class AudioRecorderManager extends ReactContextBaseJavaModule {
     return constants;
   }
 
-  @Override
+  //@Override
   public String getName() {
     return "AudioRecorderManager";
   }
