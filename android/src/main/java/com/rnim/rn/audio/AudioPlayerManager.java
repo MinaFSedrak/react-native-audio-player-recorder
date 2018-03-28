@@ -61,13 +61,13 @@ class AudioPlayerManager extends ReactContextBaseJavaModule {
   }
 
 
-  @Override
+  //@Override
   public String getName() {
     return "AudioPlayerManager";
   }
 
 
-  @Override
+  //@Override
   public Map<String, Object> getConstants() {
     Map<String, Object> constants = new HashMap<>();
 
@@ -260,7 +260,7 @@ class AudioPlayerManager extends ReactContextBaseJavaModule {
   {
     timer = new Timer();
     TimerTask task = new TimerTask() {
-      @Override
+      //@Override
       public void run() {
         if (mediaPlayer != null && isPlaying) {
           WritableMap map = Arguments.createMap();
