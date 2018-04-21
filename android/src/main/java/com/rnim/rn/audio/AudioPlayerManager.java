@@ -218,16 +218,13 @@ class AudioPlayerManager extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void playWithUrl(String url, ReadableMap playbackOptions, final Promise promise) {
-    if (isPlaying) {
+    if (isPlaying || isPaused) {
         isPlaying = false;
         isPaused = false;
         mediaPlayer.reset();
         mediaPlayer = null;
     }
-    if (isPaused) {
-      unpause(promise);
-      return;
-    }
+ 
     playMedia("remote", url, promise);
     sendEvent("playerFinished", null);
     isPlaying = true;
